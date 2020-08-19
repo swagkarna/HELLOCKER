@@ -11,7 +11,7 @@ from functools import partial
 from modules import bsod, startup, uninstall
 
 import os
-
+import shutil
 import keyboard
 import sys
 
